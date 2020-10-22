@@ -4,7 +4,7 @@ const BOARD = document.querySelectorAll(".board")[0];
 const RESTART_BTN = document.querySelectorAll(".minesweeper-btn")[0];
 const ENDSCREEN = document.querySelectorAll(".endscreen")[0];
 let size = 12,
-  mineFrequency = 0.1,
+  mineFrequency = 0.15,
   tileSize = 40,
   gameOver = false,
   tiles,
@@ -12,14 +12,14 @@ let size = 12,
   mines = [],
   numbers = [],
   numberColors = [
-    "#3498db",
-    "#2ecc71",
-    "#e74c3c",
-    "#9b59b6",
-    "#f1c40f",
-    "#1abc9c",
-    "#34495e",
-    "#7f8c8d",
+    "white",
+    "green",
+    "red",
+    "orange",
+    "#yellow",
+    "#blue",
+    "#black",
+    "#tranparent",
   ],
   endscreenContent = {
     win: "<span>You won!</span>",
@@ -48,7 +48,7 @@ const setup = () => {
   }
   tiles = document.querySelectorAll(".tile");
   boardSize = Math.sqrt(tiles.length);
-  BOARD.style.width = boardSize * tileSize + "px";
+  BOARD.style.width = boardSize * tileSize +21 + "px";
 
   document.documentElement.style.setProperty("--tileSize", `${tileSize}px`);
   document.documentElement.style.setProperty(
