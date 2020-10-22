@@ -48,7 +48,7 @@ const setup = () => {
   }
   tiles = document.querySelectorAll(".tile");
   boardSize = Math.sqrt(tiles.length);
-  BOARD.style.width = boardSize * tileSize +21 + "px";
+  BOARD.style.width = boardSize * tileSize +25 + "px";
 
   document.documentElement.style.setProperty("--tileSize", `${tileSize}px`);
   document.documentElement.style.setProperty(
