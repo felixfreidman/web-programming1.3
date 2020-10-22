@@ -220,25 +220,3 @@ restartBtn.addEventListener('click', function(e) {
 	e.preventDefault();
 	clear();
 });
-
-// Настройки
-boardSizeBtn.addEventListener('change', function(e) {
-	console.log(this.value);
-	size = this.value;
-	tileSize = 70 - (size * 2); // Уменьшаем размер клетки, если доска больше
-	clear();
-});
-/*
-	tileSizeBtn.addEventListener('change', function(e) {
-	console.log(this.value);
-	tileSize = this.value;
-	clear();
-	});
-*/
-difficultyBtns.forEach(btn => {
-	btn.addEventListener('click', function() {
-		console.log(this.value);
-		bombFrequency = this.value;
-		clear();
-	});
-});
